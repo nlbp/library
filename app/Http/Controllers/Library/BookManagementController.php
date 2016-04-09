@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Library\BookManagement;
 
 class BookManagementController extends Controller
 {
@@ -16,7 +17,8 @@ class BookManagementController extends Controller
      */
     public function index()
     {
-        //
+        $data = BookManagement::all();
+        return view('library.bookmanagement.index', ['data' => $data]);
     }
 
     /**
@@ -26,7 +28,7 @@ class BookManagementController extends Controller
      */
     public function create()
     {
-        //
+        return view('library.bookmanagement.create');
     }
 
     /**
@@ -48,7 +50,8 @@ class BookManagementController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = BookManagement::findOrFail($id);
+        return view('library.bookmanagement.show', ['data' => $data]);
     }
 
     /**
@@ -59,7 +62,8 @@ class BookManagementController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = BookManagement::findOrFail($id);
+        return view('library.bookmanagement.edit', ['data' => $data]);
     }
 
     /**
