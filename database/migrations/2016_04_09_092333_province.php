@@ -12,7 +12,6 @@ class Province extends Migration
      */
     public function up()
     {
-        //
         DB::unprepared(file_get_contents('app/sql/province.sql'));
     }
 
@@ -23,6 +22,9 @@ class Province extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('amphur');
+        Schema::drop('district');
+        Schema::drop('geography');
+        Schema::drop('province');
     }
 }

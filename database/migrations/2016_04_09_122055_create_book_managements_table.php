@@ -33,7 +33,7 @@ class CreateBookManagementsTable extends Migration
             $table->string('read_by');
             $table->string('comment');
             $table->integer('publish_location')->unsigned();
-            $table->foreign('publish_location')->references('PROVINCE_ID')->on('province');
+            $table->foreign('publish_location')->references('GEO_ID')->on('geography');
         });
     }
 
