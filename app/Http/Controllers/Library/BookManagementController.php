@@ -30,7 +30,25 @@ class BookManagementController extends Controller
     public function create(SymfonyRequest $request)
     {
         $data = new BookManagement();
-        return view('library.bookmanagement.create', ['data' => $data]);
+        $data->book_name = 'Book1';
+        $data->author = 'TestBook';
+        $data->interpreter = 'no';
+        $data->year_publish = 2016;
+        $data->edition = 1;
+        $data->isbn = 0;
+        $data->book_id = 1;
+        $data->url = 'http://testbook.com';
+        $data->category_id = 'd55';
+        $data->title = 'test book';
+        $data->key_word = 'test book';
+        $data->book_review = 'This is a test book';
+        $data->cd_copy = 1;
+        $data->total_time = '72:00';
+        $data->book_status = 'reading';
+        $data->read_by = 'people';
+        $data->comment = 'No comment';
+        $data->save();
+        return view('library.bookmanagement.create');
     }
 
     /**
