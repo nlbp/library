@@ -32,8 +32,8 @@ class CreateBookManagementsTable extends Migration
             $table->string('book_status');
             $table->string('read_by');
             $table->string('comment');
-            $table->integer('publish_location')->unsigned();
-            $table->foreign('publish_location')->references('GEO_ID')->on('geography');
+//            $table->integer('publish_location')->unsigned();
+//            $table->foreign('publish_location')->references('GEO_ID')->on('geography');
         });
     }
 

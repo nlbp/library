@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Library;
 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -26,7 +27,7 @@ class BookManagementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(SymfonyRequest $request)
     {
         return view('library.bookmanagement.create');
     }
