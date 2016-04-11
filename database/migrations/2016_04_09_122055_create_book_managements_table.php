@@ -15,6 +15,7 @@ class CreateBookManagementsTable extends Migration
         Schema::create('book_managements', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->engine = 'InnoDB';
             $table->string('book_name');
             $table->string('author');
             $table->string('interpreter')->nullable();
@@ -32,8 +33,8 @@ class CreateBookManagementsTable extends Migration
             $table->string('book_status');
             $table->string('read_by');
             $table->string('comment')->nullable();
-            $table->integer('publish_location')->unsigned();
-            $table->foreign('publish_location')->references('GEO_ID')->on('geography');
+            $table->integer('publish_location');
+            $table->foreign('publish_location')->references('PROVINCE_ID')->on('province');
         });
     }
 
