@@ -13,6 +13,7 @@ class CreateBookManagementsTable extends Migration
     public function up()
     {
         Schema::create('book_managements', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->timestamps();
             $table->string('book_name');
