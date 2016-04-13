@@ -19,4 +19,5 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::resource('library/book', 'Library\BookManagementController');
+Route::resource('library/book-management', 'Library\BookManagementController');
+Route::resource('library/book-status', 'Library\BookStatusController');
