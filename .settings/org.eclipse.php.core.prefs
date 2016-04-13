@@ -1,3 +1,3 @@
 eclipse.preferences.version=1
-include_path=0;/library
+include_path=0;/library\u00051;D\:/web/library/vendor\u00051;D\:/web/library/app\u00051;D\:/web/library/database
 use_asp_tags_as_php=false

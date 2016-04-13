@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
 	<buildpathentry excluding="vendor/**/test*/**" kind="src" path=""/>
+	<buildpathentry external="true" kind="lib" path="D:/web/library/app"/>
+	<buildpathentry external="true" kind="lib" path="D:/web/library/vendor"/>
+	<buildpathentry external="true" kind="lib" path="D:/web/library/database"/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
 </buildpath>

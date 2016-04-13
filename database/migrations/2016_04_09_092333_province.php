@@ -13,6 +13,10 @@ class Province extends Migration
     public function up()
     {
         DB::unprepared(file_get_contents('app/sql/province.sql'));
+        DB::statement('ALTER TABLE geography engine=InnoDB');
+        DB::statement('ALTER TABLE province engine=InnoDB');
+        DB::statement('ALTER TABLE amphur engine=InnoDB');
+        DB::statement('ALTER TABLE district engine=InnoDB');
     }
 
     /**
